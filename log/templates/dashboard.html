@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>RBAC Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="dashboard-container">
+        <h1>Welcome, {{ user.id }}!</h1>
+        <p>Your role: {{ user.role }}</p>
+        <p>Your permissions: {{ user.permissions }}</p>
+        <a class="logout" href="/logout">Logout</a>
+        <ul>
+            <li><a href="/action/view_dashboard">View Dashboard</a></li>
+            <li><a href="/action/edit_users">Edit Users</a></li>
+            <li><a href="/action/delete_users">Delete Users</a></li>
+        </ul>
+    </div>
+</body>
+</html>
